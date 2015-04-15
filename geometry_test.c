@@ -151,16 +151,16 @@ START_TEST(coord_2d_area_triangle)
     coord_2d_t a;
     coord_2d_t b;
     coord_2d_t c;
+    double exp =2;
     a.x = 0;
     a.y = 0;
     b.x = 0;
     b.y = 2;
     c.x = 2;
     c.y = 0;
-    exp = 2;
     
     coord_2d_area_triangle(&a, &b, &c);
-    ck_assert(coord_2d_area_triangle(&a, &b, &c, &exp));
+    ck_assert(coord_2d_area_triangle(&a, &b, &c) == exp);
 
 }
 END_TEST
