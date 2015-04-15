@@ -74,6 +74,6 @@ double coord_2d_area_triangle(const coord_2d_t*a,const coord_2d_t*b,const coord_
 {
 	double area = 0, cordAx = a->x, cordAy = a->y, cordBx = b->x, cordBy = b->y, cordCx = c->x, cordCy = c->y;
 	
-	area = fabs(((cordAx)(cordBy-cordCy)+cordBx(cordCy-cordAy)+cordCx(cordAy-cordBy))/2);
+	area = fabs(((cordAx)*(cordBy-cordCy)+(cordBx)*(cordCy-cordAy)+(cordCx)*(cordAy-cordBy))/2);
 	return area;
 }
